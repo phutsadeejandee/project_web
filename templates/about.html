@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>กระทู้ไหมพรม</title>
+  <link rel="shortcut icon" type="image/png" href="https://image.flaticon.com/icons/png/128/606/606053.png">
+  <!-- Bootstrap core CSS -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="static/css/clean-blog.min.css" rel="stylesheet">
+  <style>
+    .container-1{
+      width: 1280px;
+      margin: 70px auto 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      
+
+    }
+    .container-1 .box{
+      position: relative;
+      width: 300px;
+      height: 300px;
+      background: rgb(226, 160, 62);
+      margin: 10px;
+      box-sizing: border-box;
+      display: inline-block;
+    }
+    .container-1 .box .imgBox{
+      position: relative;
+      overflow: hidden;
+    }
+    .container-1 .box .imgBox img{
+      max-width: 100%;
+      transition: transform 2s;
+    }
+    .container-1 .box:hover .imgBox img{
+      transform: scale(1.2);
+    }
+    .container-1 .box .details{
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      bottom: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, .8);
+      transform: scaleY(0);
+      transition: transform .5s;
+    }
+    .container-1 .box:hover .details{
+      transform: scaleY(1);
+    }
+    .container-1 .box .details .content{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      padding: 15px;
+      color: #fff;
+    }
+    .container-1 .box .details .content h2{
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+      color: rgb(226, 160, 62);
+    }
+    .container-1 .box .details .content p{
+      margin: 10px 0 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="/">ไพรหมม</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">หน้าแรก</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">เกี่ยวกับ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/post">กระดานไหม</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">ติดต่อ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('https://4.bp.blogspot.com/-LTEOkF8n-nY/V5HF9Aa5OnI/AAAAAAAAAQQ/-ASnxGtLnugnCELRkuUTxgeJJNe8s1-9ACLcB/s1600/%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%259A%25E0%25B8%2587%25E0%25B8%25B2%25E0%25B8%2599%25E0%25B8%2596%25E0%25B8%25B1%25E0%25B8%2581%25E0%25B9%2582%25E0%25B8%2584%25E0%25B8%25A3%25E0%25B9%2580%25E0%25B8%258A%25E0%25B8%2595%25E0%25B9%258C%25E0%25B8%2597%25E0%25B8%25B3%25E0%25B8%2597%25E0%25B8%25B5%25E0%25B9%2588%25E0%25B8%259A%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%2599%2B2560%2B%25E0%25B8%25A3%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B9%2584%25E0%25B8%2594%25E0%25B9%2589%25E0%25B9%2580%25E0%25B8%25AA%25E0%25B8%25A3%25E0%25B8%25B4%25E0%25B8%25A1%2B%25E0%25B8%2587%25E0%25B8%25B2%25E0%25B8%2599%25E0%25B8%259D%25E0%25B8%25B5%25E0%25B8%25A1%25E0%25B8%25B7%25E0%25B8%25AD%25E0%25B9%2584%25E0%25B8%25AB%25E0%25B8%25A1%25E0%25B8%259E%25E0%25B8%25A3%25E0%25B8%25A1%2B%2528%25E0%25B8%258A%25E0%25B8%25B4%25E0%25B9%2589%25E0%25B8%2599%25E0%25B8%25A5%25E0%25B8%25B0%2B30-120%2B%25E0%25B8%259A%25E0%25B8%25B2%25E0%25B8%2597%2529.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>ไหม อะไร พรม</h1>
+            <span class="subheading">รวมไหม</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container-1">
+    <div class="box">
+      <div class="imgBox">
+        <img src="https://www.fahmui.com/pub/media/catalog/product/cache/3222e09fa17c26cc87232f141b3d9d01/a/7/a7-38.jpg">
+      </div>
+      <div class="details">
+        <div class="content">
+          <h2>คอตต้อน (Cotton)</h2>
+        <p>ไหมชนิดนี้เหมาะกับอากาศร้อนอย่างบ้านเรา เส้นไหมมีความนุ่ม ระบายอากาศได้ดี เหมาะกับงานที่ต้องซักบ่อยๆอย่างชุดเด็กเล็ก</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="imgBox">
+        <img src="https://ae01.alicdn.com/kf/HTB1qJPli9_I8KJjy0Foq6yFnVXah/Dia-1mm-300.jpg">
+      </div>
+      <div class="details">
+        <div class="content">
+          <h2>ลินิน (Linen)</h2>
+        <p>ไหมชนิดนี้เหมาะกับอากาศร้อนอย่างบ้านเรา เส้นไหมมีความนุ่ม ระบายอากาศได้ดี เหมาะกับงานที่ต้องซักบ่อยๆอย่างชุดเด็กเล็ก</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="imgBox">
+        <img src="https://img.joomcdn.net/369229cdd88b1a2da213f15d8cded58deaa9f532_original.jpeg">
+      </div>
+      <div class="details">
+        <div class="content">
+          <h2>ป่านหรือใยกัญชง (Hemp)</h2>
+        <p>เส้นใยจากพืชที่มีความคล้ายคลึงกับลินิน เป็นเส้นไหมที่แข็งแรง ทนความร้อน ยืดหยุ่นได้ดี มักใช้กับส่วนงานตกแต่งหรือพวกชุดหลวมๆ</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="imgBox">
+        <img src="https://www.fahmui.com/pub/media/catalog/product/cache/3222e09fa17c26cc87232f141b3d9d01/1/5/15_4.jpg">
+      </div>
+      <div class="details">
+        <div class="content">
+          <h2>ไผ่ (Bamboo)</h2>
+        <p>เส้นใยจากพืชที่มีความคล้ายคลึงกับลินิน เป็นเส้นไหมที่แข็งแรง ทนความร้อน ยืดหยุ่นได้ดี มักใช้กับส่วนงานตกแต่งหรือพวกชุดหลวมๆ</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="imgBox">
+        <img src="https://do.lnwfile.com/j84r60.jpg">
+      </div>
+      <div class="details">
+        <div class="content">
+          <h2>วูล (Wool)</h2>
+        <p>เป็นเส้นไหมที่ทำมาจากขนสัตว์ ไหมวูลมีความทนทาน ยืดหยุ่น และไม่ยับง่าย มีเส้นไหมที่หยาบ กันน้ำได้ดี</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="imgBox">
+        <img src="https://cf.shopee.co.th/file/75b97fa4b72a190268d291eb50d1866c">
+      </div>
+      <div class="details">
+        <div class="content">
+          <h2>โมแฮร์ (Mohair)</h2>
+        <p>ทำมาจากขนแพะแองโกลา มีลักษณะเบาและอุ่น โมแฮร์มักผสมกับวูลหรือไนลอนเพื่อลดความคันที่เกิดจากลักษณะขน เช่นเดียวกับวูล โมแฮร์เหมาะกับงานสเวตเตอร์ หมวก ผ้าพันคอ และถุงมือ</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="imgBox">
+        <img src="https://scontent.fbkk18-1.fna.fbcdn.net/v/t1.0-9/22221643_1838576422836385_2933049891050197213_n.jpg?_nc_cat=105&_nc_sid=8024bb&_nc_eui2=AeHDf5kv1cjiQkkajJn8g4-TQdnyKftQcQP-Puy9lXkoFc5_r99pn_ovaZmU6vKXcEDakpFAGfybyms37ou7VpYFI78hoa0u-afk6Nr9xB93nw&_nc_ohc=kA5NVPHpofIAX93yESi&_nc_ht=scontent.fbkk18-1.fna&oh=95e0f805f4dde804be00e2aecefdef57&oe=5E93E38E">
+      </div>
+      <div class="details">
+        <div class="content">
+          <h2>อัลปาก้า (Alpaca)</h2>
+        <p>ทำมาจากขนสัตว์ตระกูลลามะที่หน้าตาน่ารักๆนั่นละค่ะ เป็นขนที่มีความอ่อนนุ่ม อุ่นมาก และเบา ราคาถูกกว่าแคชเมียร์ ใช้กับงานถัก เช่น หมวก ผ้าพันคอ และสเวตเตอร์</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="imgBox">
+        <img src="https://my-test-11.slatic.net/p/e1c70d45f7742fd0812fe68ca486916c.jpg">
+      </div>
+      <div class="details">
+        <div class="content">
+          <h2>แองโกรา (Angora)</h2>
+        <p>ทำมาจากขนกระต่ายแองโกรานุ่มน่ารัก แต่มีข้อเสียคือเส้นไหมแตกง่าย ราคาก็แพง จึงมักผสมกับไหมอื่นๆเพื่อทำให้แข็งแรงทนทานขึ้นด้วย มักใช้งานหมวกและสเวตเตอร์</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  
+</body>
+
+</html>
